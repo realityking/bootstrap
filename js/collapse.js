@@ -70,6 +70,7 @@
       this.$element
         .removeClass('collapsing')
         .addClass('in')
+        .attr('aria-hidden', 'false')
         [dimension]('auto')
       this.transitioning = 0
       this.$element.trigger('shown.bs.collapse')
@@ -102,6 +103,7 @@
       .addClass('collapsing')
       .removeClass('collapse')
       .removeClass('in')
+      .attr('aria-hidden', 'true')
 
     this.transitioning = 1
 

@@ -561,6 +561,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
       this.$element
         .removeClass('collapsing')
         .addClass('in')
+        .attr('aria-hidden', 'false')
         [dimension]('auto')
       this.transitioning = 0
       this.$element.trigger('shown.bs.collapse')
@@ -593,6 +594,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
       .addClass('collapsing')
       .removeClass('collapse')
       .removeClass('in')
+      .attr('aria-hidden', 'true')
 
     this.transitioning = 1
 
